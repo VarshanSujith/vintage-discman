@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Vintage Discman</title>
+  <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/1039565532803903550/1066334362230067220/vintageLogo.png" type="image/x-icon">
   <link rel="stylesheet" href="assets/styles/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,17 +19,17 @@
       <div class="dashboard">
         <span class="dhome"><a href="#home">Home</a></span>
         <span class="dabout"><a href="#about">About</a></span>
-        
         <span class="dalbum"><a href="#albums">Albums</a></span>
         <span class="dcontact"><a href="#contact">Contact</a></span>
       </div>
+      
       <div class="discman">
-          <button onclick="changePage()"><span>DiscMan</span></button>
+          <button onclick="changePage()"><span><span class="PageName"><img src="https://cdn.discordapp.com/attachments/1039565532803903550/1065298581474525204/vintageLogo.png" alt=""></span></span></button>
       </div>
+      
       <video autoplay muted loop id="landingPageVideo">
         <source src="./assets/images/videos/landingPageVideo.mp4" type="video/mp4">
       </video>
-      
     </div>
     <div class="about" id="about">
       <div class="aboutImage js-scroll ai1">
@@ -39,7 +40,7 @@
         <h3>Explore</h3>
         <h1>Find the flavour of your Life</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam est enim reiciendis cum sequi error saepe, hic cupiditate. Alias qui odit expedita officia doloribus rerum, distinctio vero sunt eos corrupti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, animi? Autem, officia! Corporis dicta quis, provident doloribus nam tenetur itaque nemo quia veniam blanditiis obcaecati, explicabo quibusdam cum asperiores ab?
+          The masterpieces contained in vinyl will find a way to your heart through our website. We wish to provide our listeners a world solely containing the vinyls, a slip into the timeline; where they loose themselves in the Vint-Age. Learned lovers of music who seek solace through the vinyl can now have the touch of them anywhere through our website.
         </p>
       </div>
       <div class="aboutImage js-scroll ai2">
@@ -84,28 +85,32 @@
           <h2>Kind Of Blue</h2>
           <div class="content">  
           <img  src="../assets/images/jazz/Kind of Blue.jpg" alt="" class="albumImage">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+            <p>Columbia<br><br> 
+             Miles Davis (t), John Coltrane (ts), Cannonball Adderley (as), Wynton Kelly (p), Bill Evans (p), Paul Chambers (b) and Jimmy Cobb (d).</p>
         </div>
         </div>
         <div class="j" id="jsc">
           <h2>Saxophone Colossus</h2>
           <div class="content">  
           <img  src="../assets/images/jazz/Saxophone Colossus.jpg" alt="" class="albumImage">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+            <p>Prestige<br><br>
+             Sonny Rollins (ts), Tommy Flanagan (p), Doug Watkins (b) and Max Roach (d). </p>
         </div>
         </div>
         <div class="j" id="jbc">
           <h2>Brilliant Corners</h2>
           <div class="content">  
           <img  src="../assets/images/jazz/Brilliant Corners.jpg" alt="" class="albumImage">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+            <p>Riverside<br><br>
+             Thelonious Monk (p, celeste), Ernie Henry (as), Sonny Rollins (ts), Oscar Pettiford/Paul Chambers (b), Max Roach (d) and Clark Terry (t).</p>
         </div>
         </div>
         <div class="j" id="jt">
           <h2>Timeout</h2>
           <div class="content">  
           <img  src="../assets/images/jazz/Timeout.jpg" alt="" class="albumImage">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>          
+            <p>Columbia <br><br>
+             Dave Brubeck (p), Paul Desmond (as), Eugene Wright (b) and Joe Morello (d).</p>          
         </div>
         </div>
       </div>
@@ -124,28 +129,39 @@
           <h2>Come Fly With Me</h2>
           <div class="content">
           <img  src="../assets/images/pop/come-fly-with-me.jpg" alt="" class="albumImage">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+          <p>By Frank Sinatra
+          <br><br>
+          Billy May and orchestra</p>
         </div>
         </div>
         <div class="p" id="ptw">
           <h2>The Wildest</h2>
           <div class="content">
           <img  src="../assets/images/pop/the wildest.jpg" alt="" class="albumImage">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+            <p>By louis prima
+            <br><br>
+             Featuring Keely Smith 
+              With Sam sutera and the witnesses</p>
         </div>
         </div>
         <div class="p" id="peca">
           <h2>Elvis' Christmas Album</h2>
           <div class="content">
           <img  src="../assets/images/pop/Elvis' Christmas Album.jpg" alt="" class="albumImage" >
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+          <p>By Elvis and orchestra
+          <br><br>
+           Ballad and gospel</p>
         </div>
         </div>
         <div class="p" id="pbc">
           <h2>Black Coffee</h2>
           <div class="content">
           <img src="../assets/images/pop/black coffee.jpg" alt="" class="albumImage">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+          <p>
+            By Peggy Lee 
+          <br><br>
+            Single vocal.
+          </p>
         </div>
         </div>
       </div>
@@ -164,28 +180,36 @@
           <h2>The Turn Of The Screw</h2>
           <div class="content">
           <img src="../assets/images/classical/the turn of the screw.jpg" alt="" class="albumImage">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+          <p>
+            Composer: Benjamin Britten<br><br>
+            Genre: Modernism
+          </p>
         </div>
         </div>
         <div class="c" id="cz">
           <h2>Zyklus</h2>
           <div class="content">
           <img  src="../assets/images/classical/zyklus.jpg" alt="" class="albumImage">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+          <p>Composer: Karlheinz Stockhausen
+          <br><br>
+          Genre: Serialism</p>
         </div>
         </div>
         <div class="c" id="cv">
           <h2>Vertigo</h2>
           <div class="content">
           <img  src="../assets/images/classical/Vertigo.jpg" alt="" class="albumImage">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+         <p>Vertigo: Original Motion Picture Soundtrack
+          </p><br><br><p>Composer: Bernard Herrmann</p>
         </div>
         </div>
         <div class="c" id="ctgv">
           <h2>The Goldberg Variation</h2>
           <div class="content">
           <img  src="../assets/images/classical/The Goldberg variation.jpg" style="width: 36%;" alt="" class="albumImage">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+          <p>Artist: Glenn Gould<br><br>
+            Genre: Baroque
+          </p>
         </div>
         </div>
       </div>
@@ -204,28 +228,34 @@
           <h2>Woody Guthrie</h2>
           <div class="content">
           <img class="albumImage"  src="./assets/images/blues/woody Guthrie.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+          <p>Talking dust bowl<br><br>Victor records 
+            Folk americana</p>
         </div>
         </div>
         <div class="b" id="bstb">
           <h2>Singin The Blues</h2>
           <div class="content">
           <img class="albumImage"  src="./assets/images/blues/singin the blues.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+          <p>By B.B.king 
+            <br><br>Crown budget label</p>
         </div>
         </div>
         <div class="b" id="bhw">
-          <h2>Howlin Wolf</h2>
+          <h2>Moanin' in the moonlight</h2>
           <div class="content">
           <img class="albumImage"  src="./assets/images/blues/howlin  wolf.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+          <p>Howlin wolf and Willie dixon
+            <br><br>Chess records 
+              Chicago blues</p>
         </div>
         </div>
         <div class="b" id="btbo">
           <h2>The Best Of Little Walter</h2>
           <div class="content">
           <img class="albumImage"  src="./assets/images/blues/The best of little walter.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+          <p>Little Walter
+           <br><br>Chess records
+            Chicago blues</p>
         </div>
         </div>
       </div>
@@ -235,7 +265,7 @@
 
 
     <div class="contact" id="contact">
-        <h2>Breathe Taking Content</h2>
+        <h2>Vinyl Music-Journey</h2>
         <div class="contactImage">
           <div class="col">
           <img src="https://m.media-amazon.com/images/I/51ZHEqUhZsL._AC_.jpg" alt="bah">
@@ -277,11 +307,11 @@
               </div>
            </div>
             <div class="address">
-              <p>Vintage DiscMan<br>1100 Atwater Avenue,<br>#6000 Westmount QC H3Z 2Y4</p>
+              <p>Vintage DiscMan<br><br>1100 Atwater Avenue,<br><br>#6000 Westmount QC H3Z 2Y4</p>
             </div>
             <div class="mail">
-                <p><a href="mailto:info@vintagediscman.com">info@vintagediscman.com</a><br>For press inquiries
-                please contact:<br><a href="mailto:media@vintagediscman.com">media@vintagediscman.com</a></p>
+                <p><a href="mailto:info@vintagediscman.com">info@vintagediscman.com</a><br><br>For press inquiries
+                please contact:<br><br><a href="mailto:media@vintagediscman.com">media@vintagediscman.com</a></p>
             </div>
             <div class="extra">
               <a href="https://privacy.microsoft.com/en-gb/privacystatement" target="_blank">
