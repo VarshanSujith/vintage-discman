@@ -1,13 +1,17 @@
 body {
 	background-color: #111;
     font-family: 'Tangerine', cursive;
-}
+    scroll-behavior: smooth;
 
+}
+body::-webkit-scrollbar{
+    display: none;
+}
 div#container {
    display: flex;
    justify-content: center;
    align-items: center;
-   width: 56%;
+   width: 50%;
    cursor: url();
 }
 
@@ -55,9 +59,6 @@ svg#main {
     display: flex;
     color: whitesmoke;
 }
-.container{
-    width: 56%;
-}
 .genre{
     display: flex;
     flex-direction: column;
@@ -75,6 +76,7 @@ svg#main {
 .jazz>span,.blues>span,.classical>span,.pop>span{
     color: brown;
     font-size: 4vw;
+    cursor: pointer;
 
 }
 .songs{
@@ -87,4 +89,8 @@ svg#main {
     display: none;
     flex-direction: column;
     gap: 1vh;
+}
+.total>p{
+    font-size: 2vw;
+    text-align: center;
 }
