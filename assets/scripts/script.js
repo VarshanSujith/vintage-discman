@@ -272,7 +272,7 @@ document.body.addEventListener("mousemove", e => {
 });
 
 function changePage(){
-	window.location="http://127.0.0.1:5500/sample/player.html"
+	window.location="/Player/player.html"
 }
 let  jazz =document.getElementById('JazzIntro')
 let  pop =document.getElementById('PopIntro')
