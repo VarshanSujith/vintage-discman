@@ -1,14 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/styles/styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/de01e3e79c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <p id="para">HEllo world!</p>
-    <script src="./assets/scripts/script.js"></script>
+  <canvas></canvas>
+  <div class="fullpage" id="main">
+    <div class="home"id='home'>
+      <div class="dashboard">
+        <span class="dhome"><a href="#home">Home</a></span>
+        <span class="dabout"><a href="#about">About</a></span>
+        
+        <span class="dalbum"><a href="#albums">Albums</a></span>
+        <span class="dcontact"><a href="#contact">Contact</a></span>
+      </div>
+      <div class="discman">
+          <button onclick="changePage()"><span>DiscMan</span></button>
+      </div>
+      <video autoplay muted loop id="landingPageVideo">
+        <source src="./assets/images/videos/landingPageVideo.mp4" type="video/mp4">
+      </video>
+      
+    </div>
+    <div class="about" id="about">
+      <div class="aboutImage js-scroll ai1">
+          <img  src="https://cdnb.artstation.com/p/assets/images/images/038/688/035/large/salvatore-d-angelo-screenshot000.jpg" alt="aha">
+         
+      </div>
+      <div class="aboutContent js-scroll">
+        <h3>Explore</h3>
+        <h1>Find the flavour of your Life</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam est enim reiciendis cum sequi error saepe, hic cupiditate. Alias qui odit expedita officia doloribus rerum, distinctio vero sunt eos corrupti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, animi? Autem, officia! Corporis dicta quis, provident doloribus nam tenetur itaque nemo quia veniam blanditiis obcaecati, explicabo quibusdam cum asperiores ab?
+        </p>
+      </div>
+      <div class="aboutImage js-scroll ai2">
+        <img  src="https://c0.wallpaperflare.com/preview/79/471/734/record-shelf-vintage-vinyl.jpg" alt="bah">
+      </div>
+    </div>
+    <div class="album-wrap" id="albums">
+      <h2>Albums</h2>
+      <div class="card">
+        <p id="JazzIntro">
+          <img onclick="toggle('jazz')"  src="https://www.teahub.io/photos/full/111-1112270_1920x1080-cool-music-wallpapers-free-royalty-jazz-saxophone.jpg" alt="" class="introImage">
+          <span><button>Jazz</button></span>
+                <audio src="https://firebasestorage.googleapis.com/v0/b/vintage-discman.appspot.com/o/hover%20music%2FTunePocket-Smooth-Brushes-Jazz-Audio-Logo-Preview%20(mp3cut.net).mp3?alt=media&token=1edde3ca-5c84-44a8-9131-5e6a076a6b99"></audio>
+        </p>
+        <p id="PopIntro">
+          <img onclick="toggle('pop')" src="https://cdn4.pitchfork.com/longform/808/autotune-header-edit2.jpg" alt="" class="introImage">
+          <span><button>Pop</button></span>
+                <audio src="https://firebasestorage.googleapis.com/v0/b/vintage-discman.appspot.com/o/hover%20music%2FTunePocket-Power-Strings-Short-Logo-Preview%20(mp3cut.net).mp3?alt=media&token=cfe7f215-f673-4863-b756-89b4b6bbd7a3"></audio>
+        </p>
+        <p id="ClassicalIntro">
+          <img onclick="toggle('classical')"  src="https://na.panasonic.com/us/sites/default/files/styles/trends_hero_desktop/public/2021-08/KC%20Symphony%20Orchestra%20streaming%20virtual%20concert%20performances%20with%20AW-UE150%20PTZ%20Cameras.png" alt="" class="introImage">
+          <span><button>Classical</button></span>
+                <audio src="https://firebasestorage.googleapis.com/v0/b/vintage-discman.appspot.com/o/hover%20music%2F0402-elvis_presley-white_christmas%20(mp3cut.net).mp3?alt=media&token=087bd357-c1b0-4de7-9208-8da94e1ec9a2"></audio>
+        </p>
+            <p id="BluesIntro">
+              <img onclick="toggle('blues')"  src="https://images2.alphacoders.com/254/thumb-1920-254782.jpg" alt="" class="introImage">
+          <span><button>Blues</button></span>
+               <audio src="https://firebasestorage.googleapis.com/v0/b/vintage-discman.appspot.com/o/hover%20music%2FTunePocket-Muddy-Road-Blues-Stinger-Preview%20(mp3cut.net).mp3?alt=media&token=6b095610-1fc9-4374-af30-cd00c000c7a0"></audio>
+            </p> 
+      </div>
+    </div>
+    <div id="jazz">
+      <div class="left">
+        <img  src="../assets/images/jazz/Kind of Blue.jpg" alt="" class="leftImage" onclick="rightToggle('jkob')">
+        <img  src="../assets/images/jazz/Saxophone Colossus.jpg" alt="" class="leftImage" onclick="rightToggle('jsc')">
+        <img  src="../assets/images/jazz/Brilliant Corners.jpg" alt="" class="leftImage" onclick="rightToggle('jbc')">
+        <img  src="../assets/images/jazz/Timeout.jpg" alt="" class="leftImage" onclick="rightToggle('jt')">
+      </div>
+      <div class="right">
+        <h1 id="jalbumTitle">JAZZ Albums</h1>
+        <div class="j" id="jkob">
+          <h2>Kind Of Blue</h2>
+          <div class="content">  
+          <img  src="../assets/images/jazz/Kind of Blue.jpg" alt="" class="albumImage">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+        </div>
+        </div>
+        <div class="j" id="jsc">
+          <h2>Saxophone Colossus</h2>
+          <div class="content">  
+          <img  src="../assets/images/jazz/Saxophone Colossus.jpg" alt="" class="albumImage">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+        </div>
+        </div>
+        <div class="j" id="jbc">
+          <h2>Brilliant Corners</h2>
+          <div class="content">  
+          <img  src="../assets/images/jazz/Brilliant Corners.jpg" alt="" class="albumImage">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+        </div>
+        </div>
+        <div class="j" id="jt">
+          <h2>Timeout</h2>
+          <div class="content">  
+          <img  src="../assets/images/jazz/Timeout.jpg" alt="" class="albumImage">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>          
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="pop">
+      <div class="left">
+        <img  src="../assets/images/pop/come-fly-with-me.jpg" alt="" class="leftImage" onclick="rightToggle('pcf')">
+        <img  src="../assets/images/pop/the wildest.jpg" alt="" class="leftImage" onclick="rightToggle('ptw')">
+        <img  src="../assets/images/pop/Elvis' Christmas Album.jpg" alt="" class="leftImage" onclick="rightToggle('peca')">
+        <img src="../assets/images/pop/black coffee.jpg" alt="" class="leftImage" onclick="rightToggle('pbc')">
+      </div>
+      <div class="right">
+        <h1 id="palbumTitle">POP Albums</h1>
+        <div class="p" id="pcf">
+          <h2>Come Fly With Me</h2>
+          <div class="content">
+          <img  src="../assets/images/pop/come-fly-with-me.jpg" alt="" class="albumImage">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+        </div>
+        </div>
+        <div class="p" id="ptw">
+          <h2>The Wildest</h2>
+          <div class="content">
+          <img  src="../assets/images/pop/the wildest.jpg" alt="" class="albumImage">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+        </div>
+        </div>
+        <div class="p" id="peca">
+          <h2>Elvis' Christmas Album</h2>
+          <div class="content">
+          <img  src="../assets/images/pop/Elvis' Christmas Album.jpg" alt="" class="albumImage" >
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+        </div>
+        </div>
+        <div class="p" id="pbc">
+          <h2>Black Coffee</h2>
+          <div class="content">
+          <img src="../assets/images/pop/black coffee.jpg" alt="" class="albumImage">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="classical">
+      <div class="left">
+        <img src="../assets/images/classical/the turn of the screw.jpg" alt="" class="leftImage" onclick="rightToggle('ctto')">
+        <img  src="../assets/images/classical/zyklus.jpg" alt="" class="leftImage" onclick="rightToggle('cz')">
+        <img  src="../assets/images/classical/Vertigo.jpg" alt="" class="leftImage" onclick="rightToggle('cv')">
+        <img  src="../assets/images/classical/The Goldberg variation.jpg" alt="" class="leftImage" onclick="rightToggle('ctgv')">
+      </div>
+      <div class="right">
+        <h1 id="calbumTitle">CLASSICAL Albums</h1>
+        <div class="c" id="ctto">
+          <h2>The Turn Of The Screw</h2>
+          <div class="content">
+          <img src="../assets/images/classical/the turn of the screw.jpg" alt="" class="albumImage">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+        </div>
+        </div>
+        <div class="c" id="cz">
+          <h2>Zyklus</h2>
+          <div class="content">
+          <img  src="../assets/images/classical/zyklus.jpg" alt="" class="albumImage">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+        </div>
+        </div>
+        <div class="c" id="cv">
+          <h2>Vertigo</h2>
+          <div class="content">
+          <img  src="../assets/images/classical/Vertigo.jpg" alt="" class="albumImage">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+        </div>
+        </div>
+        <div class="c" id="ctgv">
+          <h2>The Goldberg Variation</h2>
+          <div class="content">
+          <img  src="../assets/images/classical/The Goldberg variation.jpg" style="width: 36%;" alt="" class="albumImage">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="blues">
+      <div class="left">
+        <img src="./assets/images/blues/woody Guthrie.jpg" alt="" class="leftImage" onclick="rightToggle('bwg')">
+        <img src="./assets/images/blues/singin the blues.jpg" alt="" class="leftImage" onclick="rightToggle('bstb')">
+        <img src="./assets/images/blues/howlin  wolf.jpg" alt="" class="leftImage" onclick="rightToggle('bhw')">
+        <img src="./assets/images/blues/The best of little walter.jpg" alt="" class="leftImage" onclick="rightToggle('btbo')">
+      </div>
+      <div class="right">
+        <h1 id="balbumTitle">BLUES Albums</h1>
+        <div class="b" id="bwg">
+          <h2>Woody Guthrie</h2>
+          <div class="content">
+          <img class="albumImage"  src="./assets/images/blues/woody Guthrie.jpg" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+        </div>
+        </div>
+        <div class="b" id="bstb">
+          <h2>Singin The Blues</h2>
+          <div class="content">
+          <img class="albumImage"  src="./assets/images/blues/singin the blues.jpg" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+        </div>
+        </div>
+        <div class="b" id="bhw">
+          <h2>Howlin Wolf</h2>
+          <div class="content">
+          <img class="albumImage"  src="./assets/images/blues/howlin  wolf.jpg" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+        </div>
+        </div>
+        <div class="b" id="btbo">
+          <h2>The Best Of Little Walter</h2>
+          <div class="content">
+          <img class="albumImage"  src="./assets/images/blues/The best of little walter.jpg" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, tempora iusto nulla ipsa corporis, ab atque officia quaerat sit quasi culpa. Id ut quaerat ab cumque debitis sapiente, eligendi voluptate!</p>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="contact" id="contact">
+        <h2>Breathe Taking Content</h2>
+        <div class="contactImage">
+          <div class="col">
+          <img src="https://m.media-amazon.com/images/I/51ZHEqUhZsL._AC_.jpg" alt="bah">
+          <img src="https://i.pinimg.com/originals/ae/f5/20/aef520fc753d31eb5819731b52b36c88.jpg" alt="bah">
+          <img src="https://i.pinimg.com/236x/b4/7f/f6/b47ff6a3d1f7caedd28e213b3312a05d--columbia-records-vintage-ads.jpg" alt="bah">
+          <img src="https://c8.alamy.com/comp/J0M815/vintage-hmv-record-shop-adverts-1960s-J0M815.jpg" alt="bah">
+          </div>
+          <div class="col">
+          <img src="https://i.pinimg.com/474x/bc/88/37/bc88374dceaee01f3439f89d9a18a7cf--portable-record-player-vintage-record-players.jpg" alt="bah">
+          <img src="https://media.gettyimages.com/id/526781468/photo/maison-poussier-poster-by-l-husson.jpg?s=612x612&w=0&k=20&c=Z6ZP1MvbBkMwZymtXqZPaf9qc-QkHXQ_x8NzYXZ0b7E=" alt="bah">
+          <img src="https://i.pinimg.com/originals/ae/f5/20/aef520fc753d31eb5819731b52b36c88.jpg" alt="bah">
+          <img src="https://i.pinimg.com/474x/21/f2/7e/21f27ecf2a3d0afcfbfcaffc3d6212a3--rock-posters-concert-posters.jpg" alt="bah">
+          </div>
+          <div class="col">
+          <img src="https://www.newfairfieldlibrary.org/home/showpublishedimage/1221/637969346800370000" alt="">
+          <img src="https://media.gettyimages.com/id/1080107528/photo/posters-of-cancelled-concert-at-cnr-george-and-king-st-today-october-5-1972.jpg?s=612x612&w=0&k=20&c=wTQviMJbWoCSHl19QD8vKoY7U1p9H52w8cK5IZUepEY=" alt="">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Beatbeatbeat.jpg/220px-Beatbeatbeat.jpg" alt="">
+          <img src="https://media.gettyimages.com/id/1080107528/photo/posters-of-cancelled-concert-at-cnr-george-and-king-st-today-october-5-1972.jpg?s=612x612&w=0&k=20&c=wTQviMJbWoCSHl19QD8vKoY7U1p9H52w8cK5IZUepEY=" alt="">
+          </div>
+          <div class="col">
+          <img src="https://www.cleveland.com/resizer/6CdBsVtjQ5aBv7C7po7P78ROutM=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/expo.advance.net/img/68e00f4491/width2048/48f_071968b.jpeg" alt="">
+          <img src="https://c8.alamy.com/comp/KKNMWP/1919-uk-magazine-his-masters-voice-gramaphone-records-KKNMWP.jpg" alt="">
+          <img src="https://dspncdn.com/a1/media/692x/b4/d2/e3/b4d2e3e9fccaac36a835129499c72af0.jpg" alt="">
+          <img src="https://i.pinimg.com/originals/ae/f5/20/aef520fc753d31eb5819731b52b36c88.jpg" alt="bah">
+          </div>
+          
+        </div>
+
+        <div class="f-wrap">
+            <div class="smedia">
+             <h4>Talk to us</h4>
+              <div class="social-links">
+                  <a href="https://en-gb.facebook.com/CompulsionGames/" target="_blank" title="Facebook"><i
+                    class="fab fa-facebook"></i></a>
+                  <a href="https://twitter.com/CompulsionGames" target="_blank" title="Twitter"><i
+                        class="fab fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/compulsiongames/" target="_blank" title="Instagram"><i
+                    class="fab fa-instagram"></i></a>
+              </div>
+           </div>
+            <div class="address">
+              <p>Vintage DiscMan<br>1100 Atwater Avenue,<br>#6000 Westmount QC H3Z 2Y4</p>
+            </div>
+            <div class="mail">
+                <p><a href="mailto:info@vintagediscman.com">info@vintagediscman.com</a><br>For press inquiries
+                please contact:<br><a href="mailto:media@vintagediscman.com">media@vintagediscman.com</a></p>
+            </div>
+            <div class="extra">
+              <a href="https://privacy.microsoft.com/en-gb/privacystatement" target="_blank">
+                    Privacy and Cookies</a>
+              <a href="https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks" target="_blank">
+                    Trademarks</a>
+              <a href="https://www.microsoft.com/en-gb/servicesagreement" target="_blank">
+                  Terms of Use</a>
+          </div> 
+        </div>
+
+
+    </div>
+  </div>
+  <script src="./assets/scripts/script.js"></script>
 </body>
 </html>
+
+
+
+
+<!-- 
+<div class="album">
+  <div class="career1">
+    <img src="https://img.freepik.com/free-vector/vectorized-vintage-gramophone-sticker-with-white-border_53876-162452.jpg" alt="">
+    <p>content 1 is good</p>
+  </div>
+  <div class="career2">
+    <img src="https://img.freepik.com/free-vector/vectorized-vintage-gramophone-sticker-with-white-border_53876-162452.jpg" alt="">
+    <p>content 2 is good</p>
+  </div>
+  <div class="career3">
+    <img src="https://img.freepik.com/free-vector/vectorized-vintage-gramophone-sticker-with-white-border_53876-162452.jpg" alt="">
+    <p>content 3 is good</p>
+  </div>
+  <div class="career4">
+    <img src="https://img.freepik.com/free-vector/vectorized-vintage-gramophone-sticker-with-white-border_53876-162452.jpg" alt="">
+    <p>content 4 is good</p>
+  </div>
+  <div class="career4">
+    <img src="https://img.freepik.com/free-vector/vectorized-vintage-gramophone-sticker-with-white-border_53876-162452.jpg" alt="">
+    <p>content 5 is good</p>
+  </div>
+  <div class="career4">
+    <img src="https://img.freepik.com/free-vector/vectorized-vintage-gramophone-sticker-with-white-border_53876-162452.jpg" alt="">
+    <p>content 6 is good</p>
+  </div>
+  <div class="career4">
+    <img src="https://img.freepik.com/free-vector/vectorized-vintage-gramophone-sticker-with-white-border_53876-162452.jpg" alt="">
+    <p>content 7 is good</p>
+  </div>
+</div> -->

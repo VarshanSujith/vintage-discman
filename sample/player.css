@@ -1,0 +1,89 @@
+body {
+	background-color: #111;
+    font-family: 'Tangerine', cursive;
+}
+
+div#container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 56%;
+}
+
+svg#main {
+    max-width: 100%;
+}
+
+
+/* single styles */
+
+#StartButton {
+	cursor: pointer;
+}
+#volume-knob {
+	cursor: ns-resize;
+}
+#needle-arm {
+	cursor: move;
+}
+#vinyl {
+	cursor: pointer;
+}
+
+.image{
+    width: 80%;
+    height: 7%;
+    display: block;
+    position: relative;
+}
+.genre{
+    position: relative;
+}
+.genre > h1{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    /* border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); */
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    color: white;
+    transform: translate(-50%, -50%);
+
+}
+.disc-content{
+    display: flex;
+    color: whitesmoke;
+}
+.container{
+    width: 56%;
+}
+.genre{
+    display: flex;
+    flex-direction: column;
+}
+.total{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.jazz,.blues,.classical,.pop{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+.jazz>span,.blues>span,.classical>span,.pop>span{
+    color: brown;
+    font-size: 4vw;
+
+}
+.songs{
+    display: flex;
+    flex-direction: column;
+    color: #EBCA70;
+    gap: 0.5vh;
+}
+.albums{
+    display: none;
+    flex-direction: column;
+    gap: 1vh;
+}

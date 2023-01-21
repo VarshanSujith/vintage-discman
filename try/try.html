@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>
+		Design a Carousel Column Expansion
+		Animation effect on Hover using CSS
+	</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		.card,.jalbum-wrap {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 210px;
+			height: 254px;
+			border-radius: 4px;
+			background: #003c4f;
+			display: flex;
+			gap: 5px;
+			padding: .4em;
+		}
+
+		.card p,.jalbum-wrap div {
+			height: 100%;
+			flex: 1;
+			overflow: hidden;
+			cursor: pointer;
+			border-radius: 2px;
+			transition: all .5s;
+			background: #003c4f;
+			border: 2px solid #6d6c85;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+            
+		}
+
+		.card p:hover {
+			flex: 4;
+		}
+
+		.card p span {
+			min-width: 10rem;
+			padding: .5em;
+			text-align: center;
+			transform: rotate(-90deg);
+			transition: all .5s;
+			text-transform: uppercase;
+			color: #42032C;
+			letter-spacing: .1em;
+           
+		}
+
+		.card p:hover span {
+			transform: rotate(0);
+		} 
+
+
+        /* .jalbum-wrap div{
+            transform: rotate(-90deg);
+        }
+        .jalbum-wrap div:hover{
+            transform: rotate(0deg);
+        }
+        .jalbum-wrap> div> img{
+            width: 10%;
+            height: 10%;
+        } */
+        .card>p>span>button{
+            background-color: transparent;
+            color: #c8c2c5;
+           border: transparent;
+        }
+        /* div {
+            transform: perspective(750px) translate3d(0px, 0px, -250px) rotateX(27deg) scale(0.9, 0.9);
+            border-radius: 50%;
+            border: 5px solid #e6e6e6;
+            box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+            transition: 0.4s ease-in-out transform;
+            }
+       div:hover {
+            transform: translate3d(0px, 0px, -250px);
+            } */
+
+	</style>
+</head>
+
+<body>
+	<div class="card">
+		<p id="Jazz">
+			<span><button>Jazz</button></span>
+            <audio src="https://firebasestorage.googleapis.com/v0/b/vintage-discman.appspot.com/o/hover%20music%2FTunePocket-Smooth-Brushes-Jazz-Audio-Logo-Preview%20(mp3cut.net).mp3?alt=media&token=1edde3ca-5c84-44a8-9131-5e6a076a6b99"></audio>
+		</p>
+		<p id="Pop">
+			<span><button>Pop</button></span>
+            <audio src="https://firebasestorage.googleapis.com/v0/b/vintage-discman.appspot.com/o/hover%20music%2FTunePocket-Power-Strings-Short-Logo-Preview%20(mp3cut.net).mp3?alt=media&token=cfe7f215-f673-4863-b756-89b4b6bbd7a3"></audio>
+		</p>
+		<p id="Classical">
+			<span><button>Classical</button></span>
+            <audio src="https://firebasestorage.googleapis.com/v0/b/vintage-discman.appspot.com/o/hover%20music%2F0402-elvis_presley-white_christmas%20(mp3cut.net).mp3?alt=media&token=087bd357-c1b0-4de7-9208-8da94e1ec9a2"></audio>
+		</p>
+        <p id="Blues">
+			<span><button>Blues</button></span>
+           <audio src="https://firebasestorage.googleapis.com/v0/b/vintage-discman.appspot.com/o/hover%20music%2FTunePocket-Muddy-Road-Blues-Stinger-Preview%20(mp3cut.net).mp3?alt=media&token=6b095610-1fc9-4374-af30-cd00c000c7a0"></audio>
+		</p>
+        
+	</div>
+<img src="https://media4.giphy.com/media/ENXfhYUmhK3M58GNAQ/giphy.gif?cid=790b76112de61ffb8e7abc885d14edd7822021b9973958c1&rid=giphy.gif&ct=g" alt="" srcset="">
+    <!-- <div class="jalbums-wrap"> 
+        <div class="jalbum-wrap">
+            <div class="jalbum1" id="jalbum1">
+                    <p>hello</p>
+                    <img src="../assets/images/jazz/Kind of Blue.jpg" alt="" class="albumImage" id="img1"> -->
+                    <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Lilli_Marlene_1939.jpg" alt="" id="img2"> -->
+                    <!-- <button id="jalbum1-button"  onclick="jsong1Toggle()">Click</button>    
+            </div>
+        </div>
+        <div class="jalbum-wrap">
+            <div class="jalbum2" id="jalbum2">
+                    <p>hello</p>
+                    <img src="../assets/images/jazz/Saxophone Colossus.jpg" alt="" class="albumImage">
+                    <button id="jalbum2-button" onclick="jsong2Toggle()">Click</button>
+            </div>
+        </div>
+        <div class="jalbum-wrap">
+            <div class="jalbum3" id="jalbum3">
+                <p>hello</p>
+                <img src="../assets/images/jazz/Brilliant Corners.jpg" alt="" class="albumImage">
+                <button id="jalbum3-button" onclick="jsong3Toggle()">Click</button>
+            </div>
+        </div>
+        <div class="jalbum-wrap">
+            <div class="jalbum4" id="jalbum4">
+                <p>hello</p>
+                <img src="../assets/images/jazz/Timeout.jpg" alt="" class="albumImage">
+
+                <button id="jalbum4-button" onclick="jsong4Toggle()">Click</button>
+            </div>
+        </div>
+      </div> -->
+      <script src="./try.js"></script>
+</body>
+
+</html>
