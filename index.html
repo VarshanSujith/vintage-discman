@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/de01e3e79c.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/de01e3e79c.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <canvas></canvas>
@@ -20,12 +20,13 @@
         <span class="dhome"><a href="#home">Home</a></span>
         <span class="dabout"><a href="#about">About</a></span>
         <span class="dalbum"><a href="#albums">Albums</a></span>
+        <span class="djourney"><a href="#journey">Journey</a> </span>
         <span class="dcontact"><a href="#contact">Contact</a></span>
       </div>
       
-      <div class="discman">
-          <button onclick="changePage()"><span><span class="PageName"><img src="https://cdn.discordapp.com/attachments/1039565532803903550/1065298581474525204/vintageLogo.png" alt=""></span></span></button>
-      </div>
+      <span class="discman">
+      <span class="PageName" onclick="changePage()"><img src="https://cdn.discordapp.com/attachments/1039565532803903550/1065298581474525204/vintageLogo.png" alt=""></span>
+      </span>
       
       <video autoplay muted loop id="landingPageVideo">
         <source src="./assets/images/videos/landingPageVideo.mp4" type="video/mp4">
@@ -48,8 +49,15 @@
       </div>
     </div>
     <div class="album-wrap" id="albums">
-      <h2>Albums</h2>
-      <div class="card">
+      <div class="aTop">
+        <i onclick="changePage()" class="fa-solid fa-compact-disc"></i>
+        <h2>Albums</h2>
+       <div class="sound">
+        <button id="on" onclick="toggleSound('off')" style="display: none;"><i class="fas fa-volume-up"></i></button>
+      <button id="off" onclick="toggleSound('on')" ><i class="fas fa-volume-mute"></i></button>
+       </div>
+      </div>
+      <div class="card ">
         <p id="JazzIntro">
           <img onclick="toggle('jazz')"  src="https://www.teahub.io/photos/full/111-1112270_1920x1080-cool-music-wallpapers-free-royalty-jazz-saxophone.jpg" alt="" class="introImage">
           <span><button>Jazz</button></span>
@@ -265,7 +273,7 @@
 
 
     <div class="contact" id="contact">
-        <h2>Vinyl Music-Journey</h2>
+        <h2>Vinyl and Music-Journey</h2>
         <div class="contactImage">
           <div class="col">
           <img src="https://m.media-amazon.com/images/I/51ZHEqUhZsL._AC_.jpg" alt="bah">
@@ -291,40 +299,86 @@
           <img src="https://dspncdn.com/a1/media/692x/b4/d2/e3/b4d2e3e9fccaac36a835129499c72af0.jpg" alt="">
           <img src="https://i.pinimg.com/originals/ae/f5/20/aef520fc753d31eb5819731b52b36c88.jpg" alt="bah">
           </div>
+          <div class="col">
+            <img src="https://cdn.shopify.com/s/files/1/1021/8371/products/LF3_248.jpg?v=1571709670" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/JazzSingerAndFox.jpg/250px-JazzSingerAndFox.jpg" alt="">
+            <img src="https://bloximages.chicago2.vip.townnews.com/joplinglobe.com/content/tncms/assets/v3/editorial/e/80/e808531a-7b4f-5397-aa53-c33bfe9e2fa7/581e5a6e76a71.image.jpg" alt="">
+            <img src="./assets/images/foto1.jpg" alt="">
+          </div>
+          <div class="col">
+            <img src="https://i.pinimg.com/originals/f3/c1/ae/f3c1aef4da684b581d14a73a676d316a.jpg" alt="">
+            <img src="https://c8.alamy.com/comp/ERE8MT/1905-gramophone-advert-by-the-compagnie-franaise-du-gramophone-a-group-ERE8MT.jpg" alt="">
+            <img src="https://sites.create-cdn.net/siteimages/33/3/1/333114/11/8/8/11887141/1046x1500.jpg" alt="">
+           
+          </div>
+          <div class="col">
+            <img src="https://i0.wp.com/bajakhana.com.au/wp-content/uploads/2021/09/The-Persian-Concert-Party-The-Gramophone-News1909.jpg?fit=595%2C800&ssl=1" alt="">
+            <img src="https://c8.alamy.com/comp/2M3T497/his-masters-voice-records-advert-for-gramophone-and-records-particularly-on-dark-winter-nights-at-home-date-1915-2M3T497.jpg" alt="">
+            <img src="https://blogs.library.duke.edu/bitstreams/files/2015/08/record_bar.jpg" alt="">
+            <img src="" alt="">
+          </div>
+          <div class="col">
+            <img src="https://www.newfairfieldlibrary.org/home/showpublishedimage/1221/637969346800370000" alt="">
+            <img src="https://media.gettyimages.com/id/1080107528/photo/posters-of-cancelled-concert-at-cnr-george-and-king-st-today-october-5-1972.jpg?s=612x612&w=0&k=20&c=wTQviMJbWoCSHl19QD8vKoY7U1p9H52w8cK5IZUepEY=" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Beatbeatbeat.jpg/220px-Beatbeatbeat.jpg" alt="">
+            <img src="https://media.gettyimages.com/id/1080107528/photo/posters-of-cancelled-concert-at-cnr-george-and-king-st-today-october-5-1972.jpg?s=612x612&w=0&k=20&c=wTQviMJbWoCSHl19QD8vKoY7U1p9H52w8cK5IZUepEY=" alt="">
+            </div>
+            <div class="col">
+              <img src="https://cdn.shopify.com/s/files/1/1021/8371/products/LF3_248.jpg?v=1571709670" alt="">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/JazzSingerAndFox.jpg/250px-JazzSingerAndFox.jpg" alt="">
+              <img src="https://bloximages.chicago2.vip.townnews.com/joplinglobe.com/content/tncms/assets/v3/editorial/e/80/e808531a-7b4f-5397-aa53-c33bfe9e2fa7/581e5a6e76a71.image.jpg" alt="">
+              <img src="https://c8.alamy.com/comp/ERE8MT/1905-gramophone-advert-by-the-compagnie-franaise-du-gramophone-a-group-ERE8MT.jpg" alt="">
+            </div>
+            <div class="col">
+              <img src="https://i.pinimg.com/474x/bc/88/37/bc88374dceaee01f3439f89d9a18a7cf--portable-record-player-vintage-record-players.jpg" alt="bah">
+              <img src="https://media.gettyimages.com/id/526781468/photo/maison-poussier-poster-by-l-husson.jpg?s=612x612&w=0&k=20&c=Z6ZP1MvbBkMwZymtXqZPaf9qc-QkHXQ_x8NzYXZ0b7E=" alt="bah">
+              <img src="https://i.pinimg.com/originals/ae/f5/20/aef520fc753d31eb5819731b52b36c88.jpg" alt="bah">
+              <img src="https://i.pinimg.com/474x/21/f2/7e/21f27ecf2a3d0afcfbfcaffc3d6212a3--rock-posters-concert-posters.jpg" alt="bah">
+              </div>
+               <div class="col">
+          <img src="https://www.newfairfieldlibrary.org/home/showpublishedimage/1221/637969346800370000" alt="">
+          <img src="https://media.gettyimages.com/id/1080107528/photo/posters-of-cancelled-concert-at-cnr-george-and-king-st-today-october-5-1972.jpg?s=612x612&w=0&k=20&c=wTQviMJbWoCSHl19QD8vKoY7U1p9H52w8cK5IZUepEY=" alt="">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Beatbeatbeat.jpg/220px-Beatbeatbeat.jpg" alt="">
+          <img src="https://media.gettyimages.com/id/1080107528/photo/posters-of-cancelled-concert-at-cnr-george-and-king-st-today-october-5-1972.jpg?s=612x612&w=0&k=20&c=wTQviMJbWoCSHl19QD8vKoY7U1p9H52w8cK5IZUepEY=" alt="">
+          </div>
+          <div class="col">
+          <img src="https://www.cleveland.com/resizer/6CdBsVtjQ5aBv7C7po7P78ROutM=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/expo.advance.net/img/68e00f4491/width2048/48f_071968b.jpeg" alt="">
+          <img src="https://c8.alamy.com/comp/KKNMWP/1919-uk-magazine-his-masters-voice-gramaphone-records-KKNMWP.jpg" alt="">
+          <img src="https://dspncdn.com/a1/media/692x/b4/d2/e3/b4d2e3e9fccaac36a835129499c72af0.jpg" alt="">
+          <img src="https://i.pinimg.com/originals/ae/f5/20/aef520fc753d31eb5819731b52b36c88.jpg" alt="bah">
+          </div>
           
         </div>
-
-        <div class="f-wrap">
-            <div class="smedia">
-             <h4>Talk to us</h4>
-              <div class="social-links">
-                  <a href="https://en-gb.facebook.com/CompulsionGames/" target="_blank" title="Facebook"><i
-                    class="fab fa-facebook"></i></a>
-                  <a href="https://twitter.com/CompulsionGames" target="_blank" title="Twitter"><i
-                        class="fab fa-twitter"></i></a>
-                  <a href="https://www.instagram.com/compulsiongames/" target="_blank" title="Instagram"><i
-                    class="fab fa-instagram"></i></a>
-              </div>
-           </div>
-            <div class="address">
-              <p>Vintage DiscMan<br><br>1100 Atwater Avenue,<br><br>#6000 Westmount QC H3Z 2Y4</p>
-            </div>
-            <div class="mail">
-                <p><a href="mailto:info@vintagediscman.com">info@vintagediscman.com</a><br><br>For press inquiries
-                please contact:<br><br><a href="mailto:media@vintagediscman.com">media@vintagediscman.com</a></p>
-            </div>
-            <div class="extra">
-              <a href="https://privacy.microsoft.com/en-gb/privacystatement" target="_blank">
-                    Privacy and Cookies</a>
-              <a href="https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks" target="_blank">
-                    Trademarks</a>
-              <a href="https://www.microsoft.com/en-gb/servicesagreement" target="_blank">
-                  Terms of Use</a>
-          </div> 
-        </div>
-
-
+        <button class="leftbtn"><i class="fas fa-arrow-up"></i><a href="#home"></a></button>
     </div>
+    <div class="f-wrap">
+      <div class="smedia">
+       <h4>Talk to us</h4>
+        <div class="social-links">
+            <a href="https://en-gb.facebook.com/CompulsionGames/" target="_blank" title="Facebook"><i
+              class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/CompulsionGames" target="_blank" title="Twitter"><i
+                  class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/compulsiongames/" target="_blank" title="Instagram"><i
+              class="fab fa-instagram"></i></a>
+        </div>
+     </div>
+      <div class="address">
+        <p>Vintage DiscMan  </p>
+        <p>1100 Atwater Avenue,</p>
+        <p>#6000 Westmount QC H3Z 2Y4</p>
+      </div>
+      <div class="mail">
+            <p><a href="mailto:info@vintagediscman.com">info@vintagediscman.com</a></p>
+            <p>For press inquiries</p>
+            <a href="mailto:media@vintagediscman.com"> please contact: media@vintagediscman.com</a>
+      </div>
+      <div class="extra">
+        <p><a href="https://privacy.microsoft.com/en-gb/privacystatement" target="_blank">Privacy and Cookies</a></p>
+        <p><a href="https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks" target="_blank">Trademarks</a></p>
+        <p><a href="https://www.microsoft.com/en-gb/servicesagreement" target="_blank">Terms of Use</a></p>
+    </div> 
+  </div>
   </div>
   <script src="./assets/scripts/script.js"></script>
 </body>

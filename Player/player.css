@@ -1,5 +1,6 @@
 body {
-	background-color: #111;
+	/* background-color: #111; */
+    background-image: radial-gradient( #323126 30%, #1B150E 70%);
     font-family: 'Tangerine', cursive;
     scroll-behavior: smooth;
 
@@ -57,7 +58,23 @@ svg#main {
 }
 .disc-content{
     display: flex;
-    color: whitesmoke;
+    flex-direction: column;
+    justify-content: center;
+}
+.click{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:0 1vw;
+}.left{
+    width: 100%;
+}
+.right{
+    width: 50%;
+}
+.right>img{
+    width: 100%;
+    display: none;
 }
 .genre{
     display: flex;
@@ -66,18 +83,45 @@ svg#main {
 .total{
     display: flex;
     flex-direction: column;
-    color: white;
+    color: #EBCA70;
+}
+.logo{
+    width: 14%;
+    position: relative;
+    left: 43%;
 }
 .jazz,.blues,.classical,.pop{
     display: flex;
     flex-direction: column;
     gap: 2vh;
+}.song{
+    cursor: pointer;
+    font-size: 1.5vw;
+}
+.albums>p{
+    font-size: 2vw;
 }
 .jazz>span,.blues>span,.classical>span,.pop>span{
-    color: brown;
+    color: #EBCA70;
     font-size: 4vw;
     cursor: pointer;
-
+    /* border: 1px solid #ECBA70; */
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    align-items: center;
+}
+.jazz>span>i,.blues>span>i,.classical>span>i,.pop>span>i{
+    padding: 0.25vw;
+    color: #EBCA70;
+    font-size: 1.4vw;
+    border-radius: 50%;
+}
+#jazzright,#popright,#classicalright,#bluesright{
+    display: block;
+}
+#jazzdown,#popdown,#classicaldown,#bluesdown{
+    display: none;
 }
 .songs{
     display: flex;
@@ -90,7 +134,66 @@ svg#main {
     flex-direction: column;
     gap: 1vh;
 }
+.wrap>p{
+ font-size: 3vw;
+ transform: rotate(-90deg);
+ border: 1px solid #EBCA70;
+}
+.wrap{
+    display: flex;
+    flex-direction: row;
+    width: 35%;
+    border: 1px solid #EBCA70;
+}
 .total>p{
-    font-size: 2vw;
+    font-size: 4vw;
     text-align: center;
 }
+.song>i{
+    display: none;
+}
+.song{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5vw;
+}
+.jazz,.pop,.classical,.blues{
+    display: flex;
+}
+.card {
+    width: 35vw;
+    height: 20vh;
+    border-radius: 4px;
+    /* background: black; */
+    display: flex;
+    gap: 5px;
+    padding-left: 1vw;
+    padding-bottom: 1vw;
+    
+  }
+
+  .card>p {
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all .5s;
+    /* background: black; */
+    border: 2px solid #EBCA70;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    font-size: 2vw;  
+  }
+  /* .card>p>span {
+    min-width: 10rem;
+    padding: .5em;
+    text-align: center;
+    transform: rotate(-90deg);
+    transition: all .5s;
+    text-transform: uppercase;
+    color: #EBCA70;
+    letter-spacing: .1em;
+         
+  } */

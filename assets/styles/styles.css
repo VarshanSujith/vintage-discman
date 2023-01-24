@@ -126,7 +126,6 @@
     position: absolute;
     top:2%;
     width: 95%;
-    height: 90vh;
     padding: 1vw;
     z-index: 100;
     color: #EBCA70;
@@ -141,7 +140,7 @@
   font-size: 2.5vw;
   color: #EBCA70;
  }
-  .dhome:hover,.dabout:hover,.dalbum:hover,.dcontact:hover{
+  .dhome:hover,.djourney:hover ,.dabout:hover,.dalbum:hover,.dcontact:hover{
     transform: scale(1.1);
     cursor: pointer;
   }
@@ -156,18 +155,17 @@
     position: absolute;
     z-index: 100; 
     top: 45%;
-    left: 18%;
+    left: 45%;
     color: #EBCA70;
   }
-  .discman>button{
+  .discman>span{
     background: transparent;
     border: transparent;
     color: #EBCA70;
     font-size: 4rem;
     font-family: 'Tangerine', cursive;
   }
-  .discman>button:hover{
-    /* font-size:4.3rem; */
+  .discman>span:hover{
     transform: scale(1.1);
     cursor: pointer;
   }
@@ -228,21 +226,20 @@
   .extra{
     display: flex;
     gap: 0.3vw;
-    font-size: 1.25vw;
+    font-size: 2.1vw;
     flex-direction: column;
     justify-content: space-between;
-    height: fit-content;
+    color: #EBCA70;
+    /* height: fit-content; */
     align-self: flex-end;
     padding-bottom: 0.4vh;
+    height: 20vh;
 
   }
-  .smedia,
-  .address,
-  .mail{
-    border-right: 1px solid black;
-    /* padding: 0em 5em; */
-  }
+.extra >a{
+  text-decoration: none;
 
+}
   .card {
     width: 97vw;
     height: 70vh;
@@ -251,6 +248,7 @@
     display: flex;
     gap: 5px;
     padding: .4em;
+    
   }
 
   .card>p {
@@ -302,8 +300,8 @@
    font-family: 'Tangerine';
    font-size: 3.5em;
 }
-.album-wrap>h2{
-  font-size: 3em;
+.aTop>h2{
+  font-size: 3vw;
 }
 #jazz,#pop,#classical,#blues{
  height: 100vh;
@@ -394,7 +392,7 @@
  /* position: absolute;
   width: 50%;
   height: 50%; */
-  transform: scale(2);
+  transform: scale(3);
   transition:all 0.4s ease-in;
 }
 .aboutContent > p{
@@ -403,6 +401,43 @@
 .aboutContent > h3{
   font-size: 1.5vw;
 }
-@media screen  {
-  
+.aTop{
+  display: flex;
+  width: 95%;
+  align-items: center;
+  justify-content: space-between;
+}
+.sound>button{
+  width: 50%;
+  cursor:pointer;
+  border: none;
+  background-color: black;
+}
+.sound>button>i{
+  padding: 0.25vw;
+  color: #EBCA70;
+  font-size: 1.4vw;
+  border: 1px solid #ECBA70;
+  border-radius: 50%;
+}
+
+.aTop>i{
+  padding: 0.25vw;
+  color: #EBCA70;
+  font-size: 2vw;
+  border-radius: 50%;
+  cursor:pointer;
+}
+a{
+  text-decoration: none;
+  color: #EBCA70;
+}
+.leftbtn{
+  display: flex;
+  color: #EBCA70;
+ justify-content: flex-end;
+ padding-right: 3vw;
+  width:100%;
+  background: transparent;
+    border: none;
 }

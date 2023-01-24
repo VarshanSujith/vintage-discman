@@ -21,7 +21,7 @@ class Player {
 		this.actors = {};
 		this.tweens = {};
 		this.draggables = {};
-
+		
 		this.masterTl = new TimelineMax();
 		this.sound = new buzz.sound(this.song, {preload: true, autoplay: false, loop: false});
 		this.scratchSound = new buzz.sound('https://s3.amazonaws.com/cdn.siggyworks.com/playground/record-player/record_scratch.mp3', {preload: true, autoplay: false, loop: true});
@@ -43,9 +43,17 @@ class Player {
 		this.actors.needleHeadHandle = this.actors.needleArperture.querySelector('#needle-head-handle');
 		this.actors.needleHeadLights = document.querySelectorAll('.needle-head-lights');
 
+		this.inde=''
+		this.currentid=''
 	}
-	setSong(song){
+	setSong(song,inde){
 		this.song=song;
+		if(this.inde==''){
+			this.inde=inde;
+			this.currentid=inde;
+		}else{
+			this.currentid=inde;
+		}
 		this.sound = new buzz.sound(this.song, {preload: true, autoplay: false, loop: false});
 		this.scratchSound = new buzz.sound('https://s3.amazonaws.com/cdn.siggyworks.com/playground/record-player/record_scratch.mp3', {preload: true, autoplay: false, loop: true});
 	}
@@ -168,6 +176,7 @@ class Player {
 				if(songProgress === 100) {
 					this.hangUpNeedle();
 					this.startStop();
+					
 				} else {
 					this._moveNeedleTo(18 + this.NEEDLE_SWINGDOW*(songProgress/100));
 				}
@@ -197,6 +206,7 @@ class Player {
 
 			// stop the sound if necessary
 			if(this.NEEDLE_STATE === 1) {
+			
 				this.sound.pause();
 			}
 
@@ -283,30 +293,70 @@ var player = new Player('https://s3.amazonaws.com/cdn.siggyworks.com/playground/
 console.log(player);
 player.init();
 
-function playSong(address){
-	player.setSong(address)
+function playSong(address,inde){
+	for(let i=1;i<50;i++)
+	document.getElementById('s'+i).style.display='none'
+	document.getElementById(inde).style.display='block';
+	player.setSong(address,inde)
 }
-let tog=true
+
+var tog=true
+var albArr=['jazz','pop','classical','blues']
 function toggleAlbum(val){
-if(tog){
-var value=document.getElementById(val);
-let next=value.nextElementSibling;
-while(next){
-	next.style.display="flex";
-	next=next.nextElementSibling;
-}
-tog=!tog
-}
-else{
-	var value=document.getElementById(val);
-let next=value.nextElementSibling;
-while(next){
-	next.style.display="none";
-	next=next.nextElementSibling;
-}
-tog=!tog
-}
-}
+	var header = document.getElementById(val);
+  for (let i = 0; i < 4; i++) {
+	var dat=document.getElementById(albArr[i])
+	// document.getElementById(albArr[i]+'right').style.display='block'
+	// document.getElementById(albArr[i]+'down').style.display='none'
+    var next = dat.nextElementSibling;
+    while (next != null && dat != header) {
+      next.style.display = "none";
+      next = next.nextElementSibling;
+    }
+  }
+  var next = header.nextElementSibling;
+  while (next != null) {
+    // next.style.display = next.style.display == "none" ? "block" : "none";
+	if(next.style.display =='none'){
+		next.style.display ='block'
+		// document.getElementById(val+'right').style.display='none'
+ 		// document.getElementById(val+'down').style.display='block'
+	}else{
+		next.style.display ='none'
+		// document.getElementById(val+'right').style.display='block'
+ 		// document.getElementById(val+'down').style.display='none'
+	}
+    next = next.nextElementSibling;
+  }}
+	
+//   var rtog=false;
+//   function rightToggle(ide){
+// 	if(rtog==false){
+// 	  document.getElementById(ide).style.display='flex'
+// 	  document.getElementById(ide).style.flex='column'
+// 	  console.log(ide[0]+'albumTitle');
+// 	  document.getElementById(ide[0]+'albumTitle').style.display='none'
+// 	  rtog=true
+// 	}
+// 	else{
+// 	  document.getElementById(ide).style.display='none'
+// 	  document.getElementById(ide[0]+'albumTitle').style.display='flex'
+// 	  rtog=false
+// 	}
+//   }
+  
+  
+//   let tog=true
+//   var albArr=['jazz','pop','classical','blues']
+// function toggle(value){
+//   for (let i=0;i<albArr.length;i++){
+// 	document.getElementById(albArr[i]).style.display='none'
+//   }
+// 	document.getElementById(value).style.display=  document.getElementById(value).style.display=="flex"? "none":"flex";
+	
+//   }
+
+
 window.onload(()=>{
   window.location="http://127.0.0.1:5500/index.html"
 })

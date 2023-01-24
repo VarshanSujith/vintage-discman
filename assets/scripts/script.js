@@ -288,43 +288,7 @@ let  bluesIntro =document.getElementsByTagName('audio')[3]
 //   document.getElementsByTagName('audio')[0].play()
 // })
 
-jazz.addEventListener('mouseenter',()=>{
-    jazzIntro.play()
-})
-pop.addEventListener('mouseenter',()=>{
-    popIntro.play()
-})
-classical.addEventListener('mouseenter',()=>{
-    classicalIntro.play()
-})
-blues.addEventListener('mouseenter',()=>{
-    bluesIntro.play()
-})
-let tog=true
-function toggle(value){
- if(tog){
-  document.getElementById(value).style.display="flex";
-  tog=false}
-  else{
-    document.getElementById(value).style.display="none";
-    tog=true
-  }
-}
-let rtog=false
-function rightToggle(ide){
-  if(!rtog){
-    document.getElementById(ide).style.display='flex'
-    document.getElementById(ide).style.flex='column'
-    console.log(ide[0]+'albumTitle');
-    document.getElementById(ide[0]+'albumTitle').style.display='none'
-    rtog=true
-  }
-  else{
-    document.getElementById(ide).style.display='none'
-    document.getElementById(ide[0]+'albumTitle').style.display='flex'
-    rtog=false
-  }
-}
+
 
 const scrollElements = document.querySelectorAll(".js-scroll");
 
@@ -369,3 +333,68 @@ window.addEventListener("scroll", () => {
 document.addEventListener('mouseover',(e)=>{
   console.log(e)
 })
+
+function toggleSound(name){
+  if(name=='off'){
+    document.getElementById('off').style.display='block';
+    document.getElementById('on').style.display='none';
+    jazz.addEventListener('mouseenter',()=>{
+      jazzIntro.pause()
+  })
+  pop.addEventListener('mouseenter',()=>{
+      popIntro.pause()
+  })
+  classical.addEventListener('mouseenter',()=>{
+      classicalIntro.pause()
+  })
+  blues.addEventListener('mouseenter',()=>{
+      bluesIntro.pause()
+  })
+    
+  }
+  else{
+    document.getElementById('on').style.display='block';
+    document.getElementById('off').style.display='none';
+    jazz.addEventListener('mouseenter',()=>{
+      jazzIntro.play()
+  })
+  pop.addEventListener('mouseenter',()=>{
+      popIntro.play()
+  })
+  classical.addEventListener('mouseenter',()=>{
+      classicalIntro.play()
+  })
+  blues.addEventListener('mouseenter',()=>{
+      bluesIntro.play()
+  })
+    
+  }
+}
+
+
+let rtog=false
+function rightToggle(ide){
+  if(!rtog){
+    document.getElementById(ide).style.display='flex'
+    document.getElementById(ide).style.flex='column'
+    console.log(ide[0]+'albumTitle');
+    document.getElementById(ide[0]+'albumTitle').style.display='none'
+    rtog=true
+  }
+  else{
+    document.getElementById(ide).style.display='none'
+    document.getElementById(ide[0]+'albumTitle').style.display='flex'
+    rtog=false
+  }
+}
+
+
+let tog=true
+var albArr=['jazz','pop','classical','blues']
+function toggle(value){
+for (let i=0;i<albArr.length;i++){
+  document.getElementById(albArr[i]).style.display='none'
+}
+  document.getElementById(value).style.display=  document.getElementById(value).style.display=="flex"? "none":"flex";
+  
+}
